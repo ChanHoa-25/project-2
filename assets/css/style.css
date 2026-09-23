@@ -185,7 +185,85 @@ a {
   left: 0;
   width: 100%;
   z-index: 9999;
+  display: flex;
+  justify-content: space-between;
 }
+.header .inner-logo {
+  display: flex;
+  justify-content: center;
+  width: 240px;
+  padding: 19px;
+  font-size: 24px;
+  font-weight: 900;
+  text-align: center;
+}
+.header .inner-logo a {
+  font-size: 24px;
+  font-weight: 900;
+}
+.header .inner-logo span:first-child {
+  color: #4880ff;
+}
+.header .inner-logo span:nth-child(2) {
+  color: var(--color-text);
+}
+.header .inner-wrap {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 40px;
+  margin-right: 30px;
+}
+.header .inner-wrap .inner-notify {
+  position: relative;
+  cursor: pointer;
+}
+.header .inner-wrap .inner-notify img {
+  width: 24px;
+  height: auto;
+}
+.header .inner-wrap .inner-notify span {
+  min-width: 16px;
+  height: 16px;
+  background-color: #f93c65;
+  border-radius: 25px;
+  font-weight: 700;
+  font-size: 12px;
+  padding: 0 4px;
+  position: absolute;
+  top: -10px;
+  left: 10px;
+}
+.header .inner-wrap .inner-account {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  cursor: pointer;
+}
+.header .inner-account .inner-avata {
+  width: 44px;
+  height: 44px;
+  overflow: hidden;
+}
+.header .inner-account .inner-avata img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.header .inner-account .inner-name {
+  font-weight: 700;
+  font-size: 14px;
+  color: var(--color-text);
+  margin-bottom: 3px;
+}
+.header .inner-account .inner-role {
+  font-weight: 600;
+  font-size: 12px;
+  color: #565656;
+}
+
 /* End Header */
 /* Sider */
 .sider {
@@ -204,6 +282,49 @@ a {
 }
 .sider:-webkit-scrollbar-thumb {
   background-color: #ddd;
+}
+.sider .inner-menu {
+  list-style: none;
+  padding: 0;
+  margin: 11px 0;
+}
+.sider .inner-menu a {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  padding: 12px 16px;
+  margin: 24px;
+  margin-right: 10px;
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--color-text);
+  border-radius: 6px;
+  position: relative;
+}
+.sider .inner-menu a.active {
+  background-color: var(--color-primary);
+  color: #fff;
+}
+.sider .inner-menu a.active::before {
+  content: "";
+  position: absolute;
+  width: 4px;
+  height: 100%;
+  top: 0;
+  left: -24px;
+  background-color: var(--color-primary);
+  border-radius: 0 4px 4px 0;
+}
+.sider .inner-menu a i {
+  font-size: 16px;
+  width: 16px;
+}
+.sider .inner-menu a.inner-logout {
+  color: #f93c65;
+}
+.sider hr {
+  margin: 16px 0;
+  border: 1px solid #e0e0e0;
 }
 
 /* End Sider */
