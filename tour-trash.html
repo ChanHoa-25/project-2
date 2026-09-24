@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.css">
-    <title>Quản lý tour</title>
+    <title>Thùng rác tour</title>
   </head>
   <body>
     <!--Header-->
@@ -47,50 +47,16 @@
     <!-- End Sider-->
     <!-- Main-->
     <main class="main">
-      <h1 class="box-title">Quản lý tour</h1>
-      <!--Section-4-->
-      <div class="section-4"> 
-        <div class="inner-wrap"> 
-          <div class="inner-item"> 
-            <div class="inner-label">
-               <i class="fa-solid fa-filter"></i> Bộ lọc</div>
-          </div>
-          <div class="inner-item"> 
-            <select>
-              <option value="">Trạng thái  </option>
-              <option value="">Hoạt động </option>
-              <option value="">Tạm dừng</option>
-            </select>
-          </div>
-          <div class="inner-item"> 
-            <select>
-              <option value="">Người tạo  </option>
-              <option value="">Lê Văn A</option>
-              <option value="">Lê Văn B</option>
-            </select>
-          </div>
-          <div class="inner-item"> 
-            <div class="inner-date"> 
-              <input type="date"><span>-</span>
-              <input type="date">
-            </div>
-          </div>
-          <div class="inner-item"> 
-            <div class="inner-reset"><i class="fa-solid fa-rotate-left"></i> Xóa bộ lọc</div>
-          </div>
-        </div>
-        <!--End Section-4-->
-        <!--Section-5-->
-      </div>
+      <h1 class="box-title">Thùng rác tour</h1>
+      <!--Section-5-->
       <div class="section-5"> 
         <div class="inner-wrap"> 
           <div class="inner-change-status"> 
             <div class="inner-item"> 
               <select> 
                 <option value="">-- Hành động --</option>
-                <option value="">Hoạt động </option>
-                <option value="">Dừng hoạt động</option>
-                <option value="">Xóa</option>
+                <option value="">Khôi phục</option>
+                <option value="">Xóa vĩnh viễn</option>
               </select>
             </div>
             <div class="inner-item"> 
@@ -100,12 +66,6 @@
           <div class="inner-search">
              <i class="fa-solid fa-magnifying-glass"></i>
             <input type="text" placeholder="Tìm kiếm">
-          </div>
-          <div class="inner-button-create"> 
-            <button>+ Tạo mới</button>
-          </div>
-          <div class="inner-button-trash">
-            <button>Thùng rác</button>
           </div>
         </div>
       </div>
@@ -161,7 +121,7 @@
                 </td>
                 <td>
                   <div class="inner-buttons"> 
-                    <button class="inner-edit"><i class="fa-regular fa-pen-to-square"></i></button>
+                    <button class="inner-reset"><i class="fa-solid fa-arrow-rotate-left"></i></button>
                     <button class="inner-delete"><i class="fa-regular fa-trash-can"></i></button>
                   </div>
                 </td>

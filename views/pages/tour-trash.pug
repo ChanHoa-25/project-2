@@ -1,53 +1,25 @@
 extends ../layouts/default.pug
 
 block title
- title Quản lý tour
+ title Thùng rác tour
 block main
- h1.box-title Quản lý tour
- //Section-4
- .section-4 
-  .inner-wrap 
-   .inner-item 
-    .inner-label 
-     <i class="fa-solid fa-filter"></i> Bộ lọc
-   .inner-item 
-    select
-     option(value="") Trạng thái  
-     option(value="") Hoạt động 
-     option(value="") Tạm dừng
-   .inner-item 
-    select
-     option(value="") Người tạo  
-     option(value="") Lê Văn A
-     option(value="") Lê Văn B
-   .inner-item 
-    .inner-date 
-     input(type="date")
-     span -
-     input(type="date")
-   .inner-item 
-    .inner-reset <i class="fa-solid fa-rotate-left"></i> Xóa bộ lọc
-  //End Section-4
-  //Section-5
+ h1.box-title Thùng rác tour
+ //Section-5
  .section-5 
   .inner-wrap 
    .inner-change-status 
     .inner-item  
      select 
       option(value="") -- Hành động --
-      option(value="") Hoạt động 
-      option(value="") Dừng hoạt động
-      option(value="") Xóa
+      option(value="") Khôi phục
+      option(value="") Xóa vĩnh viễn
     .inner-item 
       button Áp dụng 
    .inner-search 
     <i class="fa-solid fa-magnifying-glass"></i>
     input(type="text" placeholder="Tìm kiếm")
-   .inner-button-create  
-    button + Tạo mới
-   .inner-button-trash
-    button Thùng rác
  //End Section-5
+
  //Section-6
  .section-6 
   .table-2  
@@ -91,7 +63,7 @@ block main
        div.inner-time 16:30 - 20/10/2024
       td
        .inner-buttons 
-        button(class="inner-edit") <i class="fa-regular fa-pen-to-square"></i>
+        button(class="inner-reset") <i class="fa-solid fa-arrow-rotate-left"></i>
         button(class="inner-delete") <i class="fa-regular fa-trash-can"></i>
  //End Section-6
  //Section-7

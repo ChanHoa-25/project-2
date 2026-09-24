@@ -1061,4 +1061,15 @@ a {
     grid-column: span 1;
   }
 }
+@media (max-width: 575.98px) {
+  .section-8 .inner-form .inner-schedule .inner-schedule-head {
+    flex-wrap: wrap;
+  }
+
+  .section-8 .inner-form .inner-schedule .inner-schedule-head input {
+    flex: none;
+    width: 100%;
+    order: 1;
+  }
+}
 /* End Section-8 */
