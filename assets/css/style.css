@@ -578,11 +578,11 @@ a {
   .table-1 {
   }
 }
-/* Table-1 */
+/* End Table-1 */
 
 /* Badge*/
 .badge {
-  width: 93px;
+  width: 120px;
   height: 27px;
   padding: 6px 22px;
   display: inline-block;
@@ -736,3 +736,81 @@ a {
   outline: none;
 }
 /* End Section-5 */
+/* Section-6 */
+.section-6 {
+  margin-bottom: 15px;
+}
+/* Section-6 */
+/* Table-2 */
+.table-2 {
+  overflow-y: auto;
+}
+
+.table-2 table {
+  background-color: #fff;
+  border: 1px solid #b9b9b9;
+  border-radius: 14px;
+  width: 100%;
+  overflow: hidden;
+  border-collapse: collapse;
+}
+.table-2 table thead th {
+  border-bottom: 1px solid #d5d5d5;
+  background-color: #fcfcfc;
+  color: var(--color-text);
+  font-size: 14px;
+  font-weight: 800;
+  padding: 14px;
+  text-align: left;
+}
+.table-2 table .inner-center {
+  text-align: center;
+}
+.table-2 table .inner-check {
+  width: 20px;
+  height: 20px;
+}
+.table-2 table tbody td {
+  padding: 8px 14px;
+  border-bottom: 1px solid #d5d5d5;
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--color-text);
+}
+.table-2 table tbody td:last-child {
+  border-bottom: 0;
+}
+.table-2 table tbody td .inner-avata {
+  width: 60px;
+  height: 60px;
+  border-radius: 6px;
+  object-fit: cover;
+}
+.table-2 table tbody td .inner-time {
+  font-size: 12px;
+}
+.table-2 table tbody td .inner-buttons {
+  display: inline-flex;
+  border-radius: 8px;
+  border: 1px solid #d5d5d5;
+  background-color: #fafbfd;
+}
+.table-2 table tbody td .inner-buttons button {
+  font-size: 15px;
+  padding: 8.5px 16.5px;
+  border: 0;
+  outline: none;
+  background-color: transparent;
+  border-right: 1px solid #d5d5d5;
+}
+.table-2 table tbody td .inner-buttons button:last-child {
+  border-right: 0;
+}
+.table-2 table tbody td .inner-buttons .inner-edit {
+  color: #000;
+}
+.table-2 table tbody td .inner-buttons .inner-delete {
+  color: #ef3826;
+}
+
+/* End Table-2 */
