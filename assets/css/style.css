@@ -814,3 +814,25 @@ a {
 }
 
 /* End Table-2 */
+/* Section-7 */
+.section-7 {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.section-7 .inner-label {
+  font-weight: 400;
+  font-size: 14px;
+  color: var(--color-text);
+}
+.section-7 .inner-pagination {
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 14px;
+  background-color: #fafbfd;
+  color: var(--color-text);
+  border: 1px solid #d5d5d5;
+  padding: 6px 14px;
+  outline: none;
+}
+/* End Section-7 */
