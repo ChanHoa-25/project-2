@@ -649,6 +649,11 @@ a {
   cursor: pointer;
   font-weight: 600;
 }
+@media (max-width: 991.98px) {
+  .section-4 .inner-wrap .inner-item {
+    padding: 10px 14px;
+  }
+}
 /* Section-4 */
 
 /* Section-5 */
@@ -706,6 +711,7 @@ a {
   align-items: center;
   gap: 15px;
   width: 366px;
+  min-height: 42px;
 }
 .section-5 .inner-search i {
   font-size: 20px;
@@ -734,6 +740,20 @@ a {
   border: 0;
   cursor: pointer;
   outline: none;
+  min-height: 42px;
+}
+@media (max-width: 991.98px) {
+  .section-5 .inner-wrap .inner-item {
+    padding: 10px 14px;
+  }
+  .section-5 .inner-search {
+    width: 100%;
+  }
+}
+@media (max-width: 575.98px) {
+  .section-5 .inner-search {
+    width: 100%;
+  }
 }
 /* End Section-5 */
 /* Section-6 */
@@ -753,6 +773,7 @@ a {
   width: 100%;
   overflow: hidden;
   border-collapse: collapse;
+  min-width: 1141px;
 }
 .table-2 table thead th {
   border-bottom: 1px solid #d5d5d5;
@@ -802,6 +823,7 @@ a {
   outline: none;
   background-color: transparent;
   border-right: 1px solid #d5d5d5;
+  cursor: pointer;
 }
 .table-2 table tbody td .inner-buttons button:last-child {
   border-right: 0;
