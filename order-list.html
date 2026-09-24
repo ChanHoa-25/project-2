@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.css">
-    <title>Quản lý tour</title>
+    <title>Quản lý đơn hàng</title>
   </head>
   <body>
     <!--Header-->
@@ -47,7 +47,7 @@
     <!-- End Sider-->
     <!-- Main-->
     <main class="main">
-      <h1 class="box-title">Quản lý tour</h1>
+      <h1 class="box-title">Quản lý đơn hàng</h1>
       <!--Section-4-->
       <div class="section-4"> 
         <div class="inner-wrap"> 
@@ -58,15 +58,9 @@
           <div class="inner-item"> 
             <select>
               <option value="">Trạng thái  </option>
-              <option value="">Hoạt động </option>
-              <option value="">Tạm dừng</option>
-            </select>
-          </div>
-          <div class="inner-item"> 
-            <select>
-              <option value="">Người tạo  </option>
-              <option value="">Lê Văn A</option>
-              <option value="">Lê Văn B</option>
+              <option value="">Khởi tạo</option>
+              <option value="">Hoàn thành</option>
+              <option value="">Hủy</option>
             </select>
           </div>
           <div class="inner-item"> 
@@ -76,76 +70,97 @@
             </div>
           </div>
           <div class="inner-item"> 
+            <select>
+              <option value="">Phương thức thanh toán</option>
+              <option value="">Ví Momo</option>
+              <option value="">ZaloPay</option>
+              <option value="">VNPay</option>
+            </select>
+          </div>
+          <div class="inner-item"> 
+            <select>
+              <option value="">Trạng thái thanh toán</option>
+              <option value="">Đã thanh toán</option>
+              <option value="">Chưa thanh toán</option>
+            </select>
+          </div>
+          <div class="inner-item"> 
             <div class="inner-reset"><i class="fa-solid fa-rotate-left"></i> Xóa bộ lọc</div>
           </div>
         </div>
+        <!--End Section-4-->
+        <!--Section-5-->
       </div>
-      <!--End Section-4//Section-5
-      -->
       <div class="section-5"> 
         <div class="inner-wrap"> 
-          <div class="inner-change-status"> 
-            <div class="inner-item"> 
-              <select> 
-                <option value="">-- Hành động --</option>
-                <option value="">Hoạt động </option>
-                <option value="">Dừng hoạt động</option>
-                <option value="">Xóa</option>
-              </select>
-            </div>
-            <div class="inner-item"> 
-              <button>Áp dụng </button>
-            </div>
-          </div>
           <div class="inner-search">
              <i class="fa-solid fa-magnifying-glass"></i>
             <input type="text" placeholder="Tìm kiếm">
-          </div>
-          <div class="inner-button-create"> 
-            <button>+ Tạo mới</button>
-          </div>
-          <div class="inner-button-trash">
-            <button>Thùng rác</button>
           </div>
         </div>
       </div>
       <!--End Section-5-->
       <!--Section-6-->
-      <div class="section-6"> 
+      <div class="section-3"> 
         <div class="table-2"> 
-          <table> 
+          <table>
             <thead> 
-              <tr> 
-                <th class="inner-center">
-                  <input class="inner-check" type="checkbox">
-                </th>
-                <th>Tên danh mục</th>
-                <th>Ảnh đại diện </th>
-                <th class="inner-center">Vị trí</th>
-                <th class="inner-center">Trạng thái </th>
-                <th>Tạo bởi </th>
-                <th>Cập nhật bởi </th>
+              <tr>
+                <th>Mã</th>
+                <th>Thông tin khách </th>
+                <th>Danh sách tour </th>
+                <th>Thanh toán </th>
+                <th>Trạng thái </th>
+                <th class="inner-text-right">Ngày đặt</th>
                 <th>Hành động</th>
               </tr>
             </thead>
             <tbody> 
-              <tr> 
-                <td class="inner-center">
-                  <input class="inner-check" type="checkbox">
-                </td>
-                <td>Danh mục 1</td>
-                <td> <img class="inner-avata" src="assets/images/tour1.png"></td>
-                <td class="inner-center">1</td>
-                <td class="inner-center">
-                  <div class="badge badge-green">Hoạt động</div>
+              <tr>
+                <td>
+                  <div class="inner-code">OD000001</div>
                 </td>
                 <td> 
-                  <div>Lê Văn A</div>
-                  <div class="inner-time">16:30 - 20/10/2024</div>
+                  <div>Họ tên: Lê Văn A </div>
+                  <div>SĐT: 0123456789</div>
+                  <div>Ghi chí: Test </div>
                 </td>
                 <td> 
-                  <div>Lê Văn A</div>
-                  <div class="inner-time">16:30 - 20/10/2024</div>
+                  <div class="inner-list"> 
+                    <div class="inner-item">
+                      <div class="inner-image"> <img src="assets/images/tour1.png"></div>
+                      <div class="inner-content"> 
+                        <div class="inner-name">Tour Hạ Long </div>
+                        <div class="inner-quantity">Người lớn: 3 x 1.500.000đ</div>
+                        <div class="inner-quantity">Trẻ em: 2 x 1.300.000</div>
+                        <div class="inner-quantity">Em bé: 2 x 1.000.000đ</div>
+                      </div>
+                    </div>
+                    <div class="inner-item">
+                      <div class="inner-image"> <img src="assets/images/tour1.png"></div>
+                      <div class="inner-content"> 
+                        <div class="inner-name">Tour Hạ Long </div>
+                        <div class="inner-quantity">Người lớn: 3 x 1.500.000đ</div>
+                        <div class="inner-quantity">Trẻ em: 2 x 1.300.000</div>
+                        <div class="inner-quantity">Em bé: 2 x 1.000.000đ</div>
+                      </div>
+                    </div>
+                  </div>
+                </td>
+                <td> 
+                  <div>Tổng tiền: 10.000.000đ </div>
+                  <div>Giảm: 400.000đ</div>
+                  <div>Mã giảm: TOURMUAHE202</div>
+                  <div>Thanh toán: 9.600.000đ</div>
+                  <div>PTTT: Ví Momo</div>
+                  <div>TTTT: Đã thanh toán</div>
+                </td>
+                <td>
+                  <div class="badge badge-orange">Khởi tạo </div>
+                </td>
+                <td class="inner-text-right"> 
+                  <div>16:20</div>
+                  <div>01/01/2024</div>
                 </td>
                 <td>
                   <div class="inner-buttons"> 
