@@ -942,11 +942,117 @@ a {
   font-size: 18px;
   font-weight: 700;
 }
+.section-8 .inner-input-list {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.section-8 .inner-input-list .inner-input-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.section-8 .inner-input-list .inner-input-item label {
+  width: 89px;
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--color-text);
+}
+.section-8 .inner-input-list .inner-input-item input {
+  flex: 1;
+}
+.section-8 .inner-checkbox-list {
+  border: 1px solid #d5d5d5;
+  background-color: #f5f6fa;
+  border-radius: 4px;
+  padding: 14px 23px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  height: 166px;
+  overflow-y: auto;
+}
+.section-8 .inner-form .inner-checkbox-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.section-8 .inner-form .inner-checkbox-item input {
+  width: 20px;
+  height: 20px;
+  margin: 0;
+}
+.section-8 .inner-form .inner-checkbox-item label {
+  font-weight: 500;
+  font-size: 14px;
+  color: var(--color-text);
+}
+.section-8 .inner-form .inner-schedule .inner-schedule-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.section-8 .inner-form .inner-schedule .inner-schedule-item {
+  border: 1px solid #d5d5d5;
+  background-color: #fff;
+  border-radius: 4px;
+  padding: 20px;
+}
+.section-8 .inner-form .inner-schedule .inner-schedule-head {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.section-8 .inner-form .inner-schedule .inner-schedule-head input {
+  flex: 1;
+}
+.section-8 .inner-form .inner-schedule-head .inner-schedule-button {
+  font-size: 18px;
+  width: 52px;
+  height: 52px;
+  border: 1px solid #d5d5d5;
+  border-radius: 4px;
+  background-color: #f5f6fa;
+  color: #a6a6a6;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.section-8 .inner-form .inner-schedule-head .inner-schedule-button.inner-move {
+  cursor: move;
+}
+.section-8
+  .inner-form
+  .inner-schedule-head
+  .inner-schedule-button.inner-remove {
+  color: #ef3826;
+}
+
+.section-8 .inner-form .inner-schedule .inner-shedule-body {
+  margin-top: 15px;
+}
+.section-8 .inner-form .inner-schedule .inner-shedule-body textarea {
+  border-radius: 4px;
+  height: 300px;
+}
+.section-8 .inner-form .inner-schedule .inner-schedule-create {
+  display: inline-block;
+  margin-top: 15px;
+  background-color: #d5d5d5;
+  color: var(--color-text);
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: 700;
+  border-radius: 4px;
+  opacity: 0.9;
+  cursor: pointer;
+}
+
 @media (max-width: 767.98px) {
   .section-8 {
     padding: 20px;
   }
-
   .section-8 .inner-form {
     grid-template-columns: 1fr;
   }
