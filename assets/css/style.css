@@ -867,7 +867,7 @@ a {
   border-radius: 14px;
   padding: 50px;
 }
-.section-8 .inner-form {
+.section-8 form {
   display: grid;
   gap: 30px;
   grid-template-columns: repeat(2, 1fr);
@@ -929,5 +929,17 @@ a {
   font-size: 18px;
   font-weight: 700;
 }
+@media (max-width: 767.98px) {
+  .section-8 {
+    padding: 20px;
+  }
 
+  .section-8 .inner-form {
+    grid-template-columns: 1fr;
+  }
+
+  .section-8 .inner-form .inner-two-col {
+    grid-column: span 1;
+  }
+}
 /* End Section-8 */
