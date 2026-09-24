@@ -1,0 +1,42 @@
+extends ../layouts/default.pug
+
+block title
+ title Tạo danh mục
+block main
+ h1.box-title Tạo danh mục
+
+ //Section-8
+ .section-8  
+  form.inner-form(action="") 
+   .inner-group 
+    label(for="name" clas="inner-label") Tên danh mục
+    input(type="text" id="name") 
+   .inner-group 
+    label(for="parent" clas="inner-label") Danh mục cha
+    select(id="parent") 
+     option(value="") -- Chọn danh mục --
+     option(value="") Danh mục 1
+     option(value="") Danh mục 2
+   .inner-group 
+    label(for="postion" clas="inner-label") Vị trí
+    input(type="number" id="position") 
+   .inner-group 
+    label(for="status" clas="inner-label") Danh mục cha
+    select(id="status") 
+     option(value="") Hoạt động
+     option(value="") Dừng hoạt động
+   .inner-group.inner-two-col 
+    label(for="avata" clas="inner-label") Ảnh đại diện
+    .inner-upload-image 
+     input(type="file" id="avata" accept="image/*")
+   .inner-group.inner-two-col 
+    label(for="description" class="inner-label") Mô tả
+    .inner-upload-image 
+     textarea(id="description")
+   .inner-button.inner-two-col 
+     button Tạo mới
+  .inner-back  
+   a(href="#") Quay lại danh sách
+ 
+     
+
