@@ -1154,3 +1154,51 @@ a {
   }
 }
 /* End Section-8 */
+/* Section-9 */
+.section-9 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+.section-9 .inner-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 14px;
+  height: 120px;
+  padding: 25px;
+  gap: 20px;
+}
+.section-9 .inner-item .inner-icon {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: #e7edff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  color: var(--color-primary);
+}
+.section-9 .inner-item .inner-text {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--color-text);
+  max-width: calc(100% - 140px);
+}
+.section-9 .inner-item:hover .inner-text {
+  color: var(--color-primary);
+}
+@media (max-width: 1191.98px) {
+  .section-9 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 767.98px) {
+  .section-9 {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
+  }
+}
+/* End Section-9 */
