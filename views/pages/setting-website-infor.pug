@@ -1,0 +1,36 @@
+extends ../layouts/default.pug
+
+block title
+ title Thông tin website 
+block main
+ h1.box-title Thông tin webstie
+
+ //Section-8
+ .section-8  
+  form.inner-form(action="") 
+   .inner-group 
+    label(for="websitename" clas="inner-label") Tên website
+    input(type="text" id="websitename" value="28.TRAVEL") 
+   .inner-group 
+    label(for="phone" clas="inner-label") Số điện thoại
+    input(type="number" id="phone" value="0123456789") 
+   .inner-group 
+    label(for="email" clas="inner-label") Email
+    input(type="email" id="email" value="contact@28travel.com") 
+   .inner-group 
+    label(for="address" clas="inner-label") Địa chỉ
+    input(type="text" id="address" value="Số 123, đường ABC") 
+   .inner-group 
+    label(for="logo" clas="inner-label") Logo
+    div(class="inner-upload-image" accept="image/*")
+     input(type="file" id="logo") 
+   .inner-group 
+    label(for="favicon" clas="inner-label") Favicon
+    div(class="inner-upload-image")
+     input(type="file" id="favicon" accept="image/*") 
+   
+   .inner-button.inner-two-col 
+     button Cập nhật
+  .inner-back  
+   a(href="#") Quay lại danh sách
+ //End Section-8
