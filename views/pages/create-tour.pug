@@ -81,19 +81,19 @@ block main
       input(type="checkbox")
       label Hồ Chí Minh
    .inner-group 
-    label(for="time" clas="inner-label") Thời gian
+    label(for="time" class="inner-label") Thời gian
     input(type="text" id="time") 
    .inner-group 
-    label(for="vehicle" clas="inner-label") Phương tiện
+    label(for="vehicle" class="inner-label") Phương tiện
     input(type="text" id="vehicel") 
    .inner-group 
-    label(for="departureDate" clas="inner-label") Ngày khởi hành
+    label(for="departureDate" class="inner-label") Ngày khởi hành
     input(type="date" id="departureDate") 
    .inner-group.inner-two-col  
-    label(for="information" clas="inner-label") Thông tin tour
+    label(for="information" class="inner-label" textarea-mce) Thông tin tour
     textarea(id="information") 
    .inner-group.inner-two-col  
-    label(clas="inner-label") Lịch trình tour
+    label(class="inner-label"  ) Lịch trình tour
      .inner-schedule 
       .inner-schedule-list
        .inner-schedule-item 
@@ -103,7 +103,7 @@ block main
          span(class="inner-schedule-button inner-remove") <i class="fa-solid fa-trash-can"></i>
          span(class="inner-schedule-button inner-more") <i class="fa-solid fa-angle-down"></i>
         .inner-schedule-body
-         textarea(name="") 
+         textarea(name=" " textarea-mce) 
       .inner-schedule-create + Thêm lịch trình
 
    .inner-button.inner-two-col 

@@ -1,5 +1,6 @@
 extends ../layouts/default.pug
 
+
 block title
  title Tạo danh mục
 block main
@@ -32,7 +33,7 @@ block main
    .inner-group.inner-two-col 
     label(for="description" class="inner-label") Mô tả
     .inner-upload-image 
-     textarea(id="description")
+     textarea(id="description" textarea-mce)
    .inner-button.inner-two-col 
      button Tạo mới
   .inner-back  

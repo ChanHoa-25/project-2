@@ -26,8 +26,14 @@ if (scheduleSection8) {
     const firstItem = listItem.querySelector(".inner-schedule-item");
     const cloneItem = firstItem.cloneNode(true);
     cloneItem.querySelector(".inner-schedule-head input").value = "";
-    cloneItem.querySelector(".inner-schedule-body textarea").value = "";
+
+    // cloneItem.querySelector(".inner-schedule-body textarea").value = "";
+    const body = cloneItem.querySelector(".inner-schedule-body");
+    const id = `mec_${Date.now()}`;
+    body.innerHTML = `<textarea textarea-mce id="${id}"></textarea>`;
+
     listItem.appendChild(cloneItem);
+    inittialTinyMCE(`#${id}`);
   });
 
   listItem.addEventListener("click", (event) => {
@@ -49,3 +55,5 @@ if (scheduleSection8) {
   });
 }
 //End Schedule Section-8
+
+//
