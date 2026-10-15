@@ -53,6 +53,23 @@ if (scheduleSection8) {
       }
     }
   });
+
+  //Kéo thả, sắp sếp
+  new Sortable(listItem, {
+    handle: ".inner-move",
+    animation: 150,
+    onStart: (event) => {
+      const textarea = event.item.querySelector("[textarea-mce");
+      const id = textarea.id;
+      tinymce.get(id).remove();
+      inittialTinyMCE(`#${id}`);
+    },
+    // onEnd: (event) => {
+    //   const textarea = event.item.querySelector("[textarea-mce");
+    //   const id = textarea.id;
+    //   inittialTinyMCE(`#${id}`);
+    // },
+  });
 }
 //End Schedule Section-8
 
