@@ -1155,6 +1155,44 @@ a {
 .section-8 .inner-form .inner-order-price {
   color: #ef3826;
 }
+.section-8 .inner-form .inner-upload-image {
+  width: 150px;
+  height: 150px;
+}
+.section-8 .inner-form .inner-upload-image .filepond--credits {
+  display: none;
+}
+.section-8 .inner-form .inner-upload-image .filepond--root {
+  margin-bottom: 0;
+  height: 100% !important;
+}
+.section-8 .inner-form .inner-upload-image .filepond--drop-label {
+  min-height: 100%;
+  cursor: pointer;
+}
+.section-8 .inner-form .inner-upload-image .filepond--drop-label label {
+  font-weight: 500;
+  font-size: 50px;
+  color: var(--color-text);
+  cursor: pointer;
+}
+.section-8 .inner-form .inner-upload-image .filepond--panel--root {
+  background-color: #f5f6fa !important;
+  border: 1px solid #d5d5d5;
+  border-radius: 5px;
+}
+.section-8 .inner-form .inner-upload-image .filepond--action-remove-item {
+  background-color: #f93c65;
+  width: 22px;
+  height: 22px;
+  top: 0;
+  left: calc(50% - 22px);
+  cursor: pointer;
+}
+.section-8 .inner-form .inner-upload-image .filepond--file-info {
+  display: none;
+}
+
 @media (max-width: 767.98px) {
   .section-8 {
     padding: 20px;

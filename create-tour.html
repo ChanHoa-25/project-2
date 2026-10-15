@@ -3,8 +3,10 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/filepond@^4/dist/filepond.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.css">
+    <link href="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.css" rel="stylesheet">
     <script src="https://cdn.tiny.cloud/1/hku7rvodxa944kf9ejogsbou40e6i8zb7j1nbnd8iqmfz4gx/tinymce/8/tinymce.min.js" referrerpolicy="origin" crossorigin="anonymous"></script>
     <script src="assets/js/tinymce-config.js"></script>
     <title>Tạo tour</title>
@@ -55,11 +57,11 @@
       <div class="section-8"> 
         <form class="inner-form" action=""> 
           <div class="inner-group"> 
-            <label for="name" clas="inner-label">Tên tour</label>
+            <label class="inner-label" for="name">Tên tour</label>
             <input type="text" id="name">
           </div>
           <div class="inner-group"> 
-            <label for="category" clas="inner-label">Danh mục</label>
+            <label class="inner-label" for="category">Danh mục</label>
             <select id="parent"> 
               <option value="">-- Chọn danh mục --</option>
               <option value="">Danh mục 1</option>
@@ -67,24 +69,24 @@
             </select>
           </div>
           <div class="inner-group"> 
-            <label for="postion" clas="inner-label">Vị trí</label>
+            <label class="inner-label" for="postion">Vị trí</label>
             <input type="number" id="position">
           </div>
           <div class="inner-group"> 
-            <label for="status" clas="inner-label">Trạng thái</label>
+            <label class="inner-label" for="status">Trạng thái</label>
             <select id="status"> 
               <option value="">Hoạt động</option>
               <option value="">Dừng hoạt động</option>
             </select>
           </div>
           <div class="inner-group inner-two-col">
-            <label for="avata" clas="inner-label">Ảnh đại diện</label>
+            <label class="inner-label" for="avata">Ảnh đại diện</label>
             <div class="inner-upload-image"> 
-              <input type="file" id="avata" accept="image/*">
+              <input type="file" id="avata" accept="image/*" filepond-image>
             </div>
           </div>
           <div class="inner-group"> 
-            <label clas="inner-label">Giá cũ</label>
+            <label class="inner-label">Giá cũ</label>
             <div class="inner-input-list"> 
               <div class="inner-input-item"> 
                 <label>Người lớn </label>
@@ -101,7 +103,7 @@
             </div>
           </div>
           <div class="inner-group"> 
-            <label clas="inner-label">Giá mới</label>
+            <label class="inner-label">Giá mới</label>
             <div class="inner-input-list"> 
               <div class="inner-input-item"> 
                 <label>Người lớn </label>
@@ -118,7 +120,7 @@
             </div>
           </div>
           <div class="inner-group"> 
-            <label clas="inner-label">Còn lại</label>
+            <label class="inner-label">Còn lại</label>
             <div class="inner-input-list"> 
               <div class="inner-input-item"> 
                 <label>Người lớn </label>
@@ -135,7 +137,7 @@
             </div>
           </div>
           <div class="inner-group"> 
-            <label clas="inner-label">Những địa điểm có tour</label>
+            <label class="inner-label">Những địa điểm có tour</label>
             <div class="inner-checkbox-list"> 
               <div class="inner-checkbox-item"> 
                 <input type="checkbox">
@@ -206,6 +208,9 @@
     </main>
     <!-- End Main-->
     <script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
+    <script src="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.js"> </script>
+    <script src="https://unpkg.com/filepond-plugin-file-validate-type/dist/filepond-plugin-file-validate-type.js"> </script>
+    <script src="https://unpkg.com/filepond@^4/dist/filepond.js"> </script>
     <script src="assets/js/scripts.js"> </script>
   </body>
 </html>

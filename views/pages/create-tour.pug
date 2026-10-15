@@ -9,28 +9,28 @@ block main
  .section-8  
   form.inner-form(action="") 
    .inner-group 
-    label(for="name" clas="inner-label") Tên tour
+    label(for="name" class="inner-label") Tên tour
     input(type="text" id="name") 
    .inner-group 
-    label(for="category" clas="inner-label") Danh mục
+    label(for="category" class="inner-label") Danh mục
     select(id="parent") 
      option(value="") -- Chọn danh mục --
      option(value="") Danh mục 1
      option(value="") Danh mục 2
    .inner-group 
-    label(for="postion" clas="inner-label") Vị trí
+    label(for="postion" class="inner-label") Vị trí
     input(type="number" id="position") 
    .inner-group 
-    label(for="status" clas="inner-label") Trạng thái
+    label(for="status" class="inner-label") Trạng thái
     select(id="status") 
      option(value="") Hoạt động
      option(value="") Dừng hoạt động
    .inner-group.inner-two-col
-    label(for="avata" clas="inner-label") Ảnh đại diện
+    label(for="avata" class="inner-label") Ảnh đại diện
     .inner-upload-image 
-     input(type="file" id="avata" accept="image/*")
+     input(type="file" id="avata" accept="image/*"  filepond-image)
    .inner-group 
-    label(clas="inner-label") Giá cũ
+    label(class="inner-label") Giá cũ
     .inner-input-list 
      .inner-input-item 
       label Người lớn 
@@ -42,7 +42,7 @@ block main
       label Em bé
       input(type="number")
    .inner-group 
-    label(clas="inner-label") Giá mới
+    label(class="inner-label") Giá mới
     .inner-input-list 
      .inner-input-item 
       label Người lớn 
@@ -54,7 +54,7 @@ block main
       label Em bé
       input(type="number")
    .inner-group 
-    label(clas="inner-label") Còn lại
+    label(class="inner-label") Còn lại
     .inner-input-list 
      .inner-input-item 
       label Người lớn 
@@ -66,7 +66,7 @@ block main
       label Em bé
       input(type="number")
    .inner-group 
-    label(clas="inner-label") Những địa điểm có tour
+    label(class="inner-label") Những địa điểm có tour
     .inner-checkbox-list 
      .inner-checkbox-item  
       input(type="checkbox")

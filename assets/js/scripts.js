@@ -73,4 +73,13 @@ if (scheduleSection8) {
 }
 //End Schedule Section-8
 
-//
+//Filepond Image
+const listFilepondImage = document.querySelectorAll("[filepond-image]");
+if (listFilepondImage.length > 0) {
+  listFilepondImage.forEach((item) => {
+    FilePond.registerPlugin(FilePondPluginImagePreview);
+    FilePond.registerPlugin(FilePondPluginFileValidateType);
+    FilePond.create(item, { labelIdle: "+" });
+  });
+}
+//End Filepond Image
