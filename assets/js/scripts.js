@@ -38,6 +38,14 @@ if (scheduleSection8) {
         parentItem.classList.toggle("hidden");
       }
     }
+    //Xóa item
+    if (event.target.closest(".inner-remove")) {
+      const parentItem = event.target.closest(".inner-schedule-item");
+      const totalItem = listItem.querySelectorAll(".inner-schedule-item").length;
+      if (parentItem && totalItem > 1) {
+        parentItem.remove();
+      }
+    }
   });
 }
 //End Schedule Section-8
