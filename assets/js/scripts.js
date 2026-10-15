@@ -29,6 +29,15 @@ if (scheduleSection8) {
     cloneItem.querySelector(".inner-schedule-body textarea").value = "";
     listItem.appendChild(cloneItem);
   });
-}
 
+  listItem.addEventListener("click", (event) => {
+    //Đóng/mở item
+    if (event.target.closest(".inner-more")) {
+      const parentItem = event.target.closest(".inner-schedule-item");
+      if (parentItem) {
+        parentItem.classList.toggle("hidden");
+      }
+    }
+  });
+}
 //End Schedule Section-8
