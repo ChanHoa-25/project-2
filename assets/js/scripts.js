@@ -14,3 +14,21 @@ if (buttonMenuMobile) {
   });
 }
 //End Menu Mobile
+
+//Schedule Section-8
+const scheduleSection8 = document.querySelector(".section-8 .inner-schedule");
+if (scheduleSection8) {
+  const buttonCreate = scheduleSection8.querySelector(".inner-schedule-create");
+  const listItem = scheduleSection8.querySelector(".inner-schedule-list");
+
+  //Tạo mới
+  buttonCreate.addEventListener("click", () => {
+    const firstItem = listItem.querySelector(".inner-schedule-item");
+    const cloneItem = firstItem.cloneNode(true);
+    cloneItem.querySelector(".inner-schedule-head input").value = "";
+    cloneItem.querySelector(".inner-schedule-body textarea").value = "";
+    listItem.appendChild(cloneItem);
+  });
+}
+
+//End Schedule Section-8
