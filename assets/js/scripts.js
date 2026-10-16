@@ -530,3 +530,53 @@ if (profileEditForm) {
       console.log(avatar);
     });
 }
+
+// Profile Change Password Form
+const profileChangePasswordForm = document.querySelector("#profile-change-password-form");
+if (profileChangePasswordForm) {
+  const validator = new JustValidate(profileChangePasswordForm);
+  validator
+    .addField("#password", [
+      {
+        rule: "required",
+        errorMessage: "Vui lòng nhập mật khẩu mới!",
+      },
+      {
+        validator: (value) => value.length >= 8,
+        errorMessage: "Mật khẩu phải chứa ít nhất 8 ký tự!",
+      },
+      {
+        validator: (value) => /[A-Z]/.test(value),
+        errorMessage: "Mật khẩu phải chứa ít nhất 1 chữ cái in hoa!",
+      },
+      {
+        validator: (value) => /[a-z]/.test(value),
+        errorMessage: "Mật khẩu phải chứa ít nhất 1 chữ cái thường!",
+      },
+      {
+        validator: (value) => /\d/.test(value),
+        errorMessage: "Mật khẩu phải chứa ít nhất 1 chữ số!",
+      },
+      {
+        validator: (value) => /[@$!%*?&]/.test(value),
+        errorMessage: "Mật khẩu phải chứa ít nhất 1 ký tự đặc biệt!",
+      },
+    ])
+    .addField("#confirm-password", [
+      {
+        rule: "required",
+        errorMessage: "Vui lòng nhập xác nhận mật khẩu!",
+      },
+      {
+        validator: (value, fields) => {
+          const password = fields["#password"].elem.value;
+          return value == password;
+        },
+        errorMessage: "Mật khẩu  xác nhận không khớp",
+      },
+    ])
+    .onSuccess((event) => {
+      const password = event.target.password.value;
+      console.log(password);
+    });
+}
