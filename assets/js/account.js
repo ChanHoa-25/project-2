@@ -130,3 +130,21 @@ if (forgotPasswordForm) {
       console.log(email);
     });
 }
+
+//Form OTP
+const otpPasswordForm = document.querySelector("#otp-password-form");
+
+if (otpPasswordForm) {
+  const validator = new JustValidate(otpPasswordForm);
+  validator
+    .addField("#otp", [
+      {
+        rule: "required",
+        errorMessage: "Vui lòng nhập mã OTP!",
+      },
+    ])
+    .onSuccess((event) => {
+      const otp = event.target.otp.value;
+      console.log(otp);
+    });
+}
