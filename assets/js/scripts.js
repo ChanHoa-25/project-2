@@ -282,7 +282,7 @@ if (orderEditForm) {
       },
       {
         rule: "customRegexp",
-        value: /(84|0[ơ3|5|7|8|9])+([0-9]{8})\b/g,
+        value: /(84|0[3|5|7|8|9])+([0-9]{8})\b/g,
         errorMessage: "Số điện thoại không đúng định dạng",
       },
     ])
@@ -301,3 +301,45 @@ if (orderEditForm) {
     });
 }
 //End Form Eidt Order
+
+//Form Setting Infor Website
+const settingWebsiteInforForm = document.querySelector("#setting-infor-website-form");
+if (settingWebsiteInforForm) {
+  const validator = new JustValidate(settingWebsiteInforForm);
+  validator
+    .addField("#websiteName", [
+      {
+        rule: "required",
+        errorMessage: "Vui lòng nhập tên website!",
+      },
+    ])
+    .addField("#email", [
+      {
+        rule: "email",
+        errorMessage: "Email không đúng định dạng!",
+      },
+    ])
+    .onSuccess((event) => {
+      const websiteName = event.target.websiteName.value;
+      const phone = event.target.phone.value;
+      const email = event.target.email.value;
+      const address = event.target.address.value;
+      const logos = filePond.logo.getFiles();
+      let logo = null;
+      if (logos.length > 0) {
+        logo = logos[0].file;
+      }
+      const favicons = filePond.favicon.getFiles();
+      let favicon = null;
+      if (favicons.length > 0) {
+        favicon = favicons[0].file;
+      }
+
+      console.log(websiteName);
+      console.log(phone);
+      console.log(email);
+      console.log(address);
+      console.log(logo);
+      console.log(favicons);
+    });
+}
