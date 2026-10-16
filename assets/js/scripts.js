@@ -254,3 +254,50 @@ if (tourCreateForm) {
       console.log(schedules);
     });
 }
+//Form Edit Order
+const orderEditForm = document.querySelector("#order-edit-form");
+if (orderEditForm) {
+  const validator = new JustValidate(orderEditForm);
+  validator
+    .addField("#fullName", [
+      {
+        rule: "required",
+        errorMessage: "Vui lòng nhập họ và tên!",
+      },
+      {
+        rule: "minLength",
+        value: 5,
+        errorMessage: "Họ và tên phải có ít nhất 5 ký tự!",
+      },
+      {
+        rule: "maxLength",
+        value: 50,
+        errorMessage: "Họ và tên không được vượt quá 50 ký tự!",
+      },
+    ])
+    .addField("#phone", [
+      {
+        rule: "required",
+        errorMessage: "Vui lòng nhập số điện thoại!",
+      },
+      {
+        rule: "customRegexp",
+        value: /(84|0[ơ3|5|7|8|9])+([0-9]{8})\b/g,
+        errorMessage: "Số điện thoại không đúng định dạng",
+      },
+    ])
+    .onSuccess((event) => {
+      const fullName = event.target.fullName.value;
+      const phone = event.target.phone.value;
+      const note = event.target.note.value;
+      const paymentMethod = event.target.paymentMethod.value;
+      const paymentStatus = event.target.paymentStatus.value;
+
+      console.log(fullName);
+      console.log(phone);
+      console.log(note);
+      console.log(paymentMethod);
+      console.log(paymentStatus);
+    });
+}
+//End Form Eidt Order
