@@ -7,91 +7,91 @@ block main
 
  //Section-8
  .section-8  
-  form.inner-form(action="") 
+  form.inner-form#tour-create-form
    .inner-group 
     label(for="name" class="inner-label") Tên tour
-    input(type="text" id="name") 
+    input(type="text" id="name" name="name") 
    .inner-group 
     label(for="category" class="inner-label") Danh mục
-    select(id="parent") 
+    select(id="category" name="category") 
      option(value="") -- Chọn danh mục --
      option(value="") Danh mục 1
      option(value="") Danh mục 2
    .inner-group 
-    label(for="postion" class="inner-label") Vị trí
-    input(type="number" id="position") 
+    label(for="position" class="inner-label") Vị trí
+    input(type="number" id="position" name="position") 
    .inner-group 
     label(for="status" class="inner-label") Trạng thái
-    select(id="status") 
+    select(id="status" name="status") 
      option(value="") Hoạt động
      option(value="") Dừng hoạt động
    .inner-group.inner-two-col
-    label(for="avata" class="inner-label") Ảnh đại diện
+    label(for="avatar" class="inner-label") Ảnh đại diện
     .inner-upload-image 
-     input(type="file" id="avata" accept="image/*"  filepond-image)
+     input(type="file" id="avatar" accept="image/*" name="avatar"  filepond-image)
    .inner-group 
     label(class="inner-label") Giá cũ
     .inner-input-list 
      .inner-input-item 
       label Người lớn 
-      input(type="number")
+      input(type="number" name="priceAdult")
      .inner-input-item 
       label Trẻ em
-      input(type="number")
+      input(type="number" name="priceChildren")
      .inner-input-item 
       label Em bé
-      input(type="number")
+      input(type="number" name="priceBaby")
    .inner-group 
     label(class="inner-label") Giá mới
     .inner-input-list 
      .inner-input-item 
       label Người lớn 
-      input(type="number")
+      input(type="number" name="priceNewAdult")
      .inner-input-item 
       label Trẻ em
-      input(type="number")
+      input(type="number" name="priceNewChildren")
      .inner-input-item 
       label Em bé
-      input(type="number")
+      input(type="number" name="priceNewBaby")
    .inner-group 
     label(class="inner-label") Còn lại
     .inner-input-list 
      .inner-input-item 
       label Người lớn 
-      input(type="number")
+      input(type="number" name="stockAdult")
      .inner-input-item 
       label Trẻ em
-      input(type="number")
+      input(type="number" name="stockChildren")
      .inner-input-item 
       label Em bé
-      input(type="number")
+      input(type="number" name="stockBaby")
    .inner-group 
     label(class="inner-label") Những địa điểm có tour
     .inner-checkbox-list 
      .inner-checkbox-item  
-      input(type="checkbox")
+      input(type="checkbox" name="locations" value="Hà Nội")
       label Hà Nội
      .inner-checkbox-item  
-      input(type="checkbox")
+      input(type="checkbox" name="locations" value="Đà Nẵng")
       label Đà Nẵng
      .inner-checkbox-item  
-      input(type="checkbox")
+      input(type="checkbox" name="locations" value="Nha Trang")
       label Nha Trang
      .inner-checkbox-item  
-      input(type="checkbox")
+      input(type="checkbox" name="locations" value="Hồ Chí Minh")
       label Hồ Chí Minh
    .inner-group 
     label(for="time" class="inner-label") Thời gian
-    input(type="text" id="time") 
+    input(type="text" id="time" name="time") 
    .inner-group 
     label(for="vehicle" class="inner-label") Phương tiện
-    input(type="text" id="vehicel") 
+    input(type="text" id="vehicle" name="vehicle") 
    .inner-group 
     label(for="departureDate" class="inner-label") Ngày khởi hành
-    input(type="date" id="departureDate") 
+    input(type="date" id="departureDate" name="departureDate") 
    .inner-group.inner-two-col  
     label(for="information" class="inner-label") Thông tin tour
-    textarea(id="information" textarea-mce) 
+    textarea(id="information" textarea-mce name="information") 
    .inner-group.inner-two-col  
     label(class="inner-label"  ) Lịch trình tour
      .inner-schedule 

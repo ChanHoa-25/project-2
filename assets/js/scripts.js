@@ -161,3 +161,96 @@ if (categoryCreateForm) {
       console.log(description);
     });
 }
+//End Form Create Category
+
+// Form Create Tour
+
+const tourCreateForm = document.querySelector("#tour-create-form");
+
+if (tourCreateForm) {
+  const validator = new JustValidate(tourCreateForm);
+  validator
+    .addField("#name", [
+      {
+        rule: "required",
+        errorMessage: "Vui lòng nhập tên tour!",
+      },
+    ])
+    .onSuccess((event) => {
+      const name = event.target.name.value;
+      const category = event.target.category.value;
+      const position = event.target.position.value;
+      const status = event.target.status.value;
+      const avatars = filePond.avatar.getFiles();
+      let avatar = null;
+      if (avatars.length > 0) {
+        avatar = avatars[0].file;
+      }
+      const priceAdult = event.target.priceAdult.value;
+      const priceChildren = event.target.priceChildren.value;
+      const priceBaby = event.target.priceBaby.value;
+      const priceNewAdult = event.target.priceNewAdult.value;
+      const priceNewChildren = event.target.priceNewChildren.value;
+      const priceNewBaby = event.target.priceNewBaby.value;
+      const stockAdult = event.target.stockAdult.value;
+      const stockChildren = event.target.stockChildren.value;
+      const stockBaby = event.target.stockBaby.value;
+
+      const locations = [];
+      //Locations
+      const listElementLocation = tourCreateForm.querySelectorAll(`input[name="locations"]:checked`);
+      listElementLocation.forEach((input) => {
+        locations.push(input.value);
+      });
+      //End Loactions
+      const schedules = [];
+
+      //Schedules
+      const listElementSchedules = tourCreateForm.querySelectorAll(".inner-schedule-item");
+      listElementSchedules.forEach((scheduleItem) => {
+        const input = scheduleItem.querySelector("input");
+        const title = input.value;
+
+        const textarea = scheduleItem.querySelector("textarea");
+        const idTextarea = textarea.id;
+        const description = tinymce.get(idTextarea).getContent();
+        schedules.push({
+          title: title,
+          description: description,
+        });
+      });
+
+      //End Schedules
+
+      const time = event.target.time.value;
+      const vehicle = event.target.vehicle.value;
+      const departureDate = event.target.departureDate.value;
+      const information = tinymce.get("information").getContent();
+
+      console.log(name);
+      console.log(category);
+      console.log(position);
+      console.log(status);
+      console.log(avatar);
+
+      console.log(priceAdult);
+      console.log(priceChildren);
+      console.log(priceBaby);
+
+      console.log(priceNewAdult);
+      console.log(priceNewChildren);
+      console.log(priceNewBaby);
+
+      console.log(stockAdult);
+      console.log(stockChildren);
+      console.log(stockBaby);
+
+      console.log(locations);
+
+      console.log(time);
+      console.log(vehicle);
+      console.log(departureDate);
+      console.log(information);
+      console.log(schedules);
+    });
+}
