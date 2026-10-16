@@ -83,3 +83,50 @@ if (listFilepondImage.length > 0) {
   });
 }
 //End Filepond Image
+
+//Biểu đồ doanh thu
+const revenueChart = document.querySelector("#revenue-chart");
+if (revenueChart) {
+  new Chart(revenueChart, {
+    type: "line",
+    data: {
+      labels: ["01", "02", "03", "04", "05", "06"],
+      datasets: [
+        {
+          label: "Tháng 02/2026",
+          data: [120000, 18000000, 3000000, 9000000, 16000000, 30000000],
+          borderColor: "#36A1EA",
+          borderWidth: 1.5,
+        },
+        {
+          label: "Tháng 01/2026",
+          data: [320000, 300000, 100000, 940000, 20000000, 20000000],
+          borderColor: "#FE6383",
+          borderWidth: 1.5,
+        },
+      ],
+    },
+    options: {
+      plugins: {
+        legend: {
+          position: "bottom",
+        },
+      },
+      scales: {
+        x: {
+          title: {
+            display: true,
+            text: "Ngày",
+          },
+        },
+        y: {
+          title: {
+            display: true,
+            text: "Doanh thu (VNĐ)",
+          },
+        },
+      },
+      maintainAspectRatio: false,
+    },
+  });
+}
