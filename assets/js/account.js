@@ -108,3 +108,25 @@ if (registerForm) {
       console.log(agree);
     });
 }
+//Form forget password
+const forgotPasswordForm = document.querySelector("#forgot-password-form");
+
+if (forgotPasswordForm) {
+  const validator = new JustValidate(forgotPasswordForm);
+
+  validator
+    .addField("#email", [
+      {
+        rule: "required",
+        errorMessage: "Vui lòng nhập email của bạn!",
+      },
+      {
+        rule: "email",
+        errorMessage: "Email không đúng định dạng",
+      },
+    ])
+    .onSuccess((event) => {
+      const email = event.target.email.value;
+      console.log(email);
+    });
+}
