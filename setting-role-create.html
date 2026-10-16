@@ -55,36 +55,36 @@
       <h1 class="box-title">Tạo nhóm quyền</h1>
       <!--Section-8-->
       <div class="section-8"> 
-        <form class="inner-form" action=""> 
+        <form class="inner-form" id="setting-role-create-form">
           <div class="inner-group"> 
-            <label for="nameRole" clas="inner-label">Tên nhóm quyền</label>
-            <input type="text" id="nameRole" value="Quản trị viên">
+            <label for="name" clas="inner-label">Tên nhóm quyền</label>
+            <input type="text" id="name" name="name" value="Quản trị viên">
           </div>
           <div class="inner-group"> 
-            <label for="desc" clas="inner-label">Mô tả ngắn</label>
-            <input type="text" id="desc" value="Có đầy đủ các quyền">
+            <label for="description" clas="inner-label">Mô tả ngắn</label>
+            <input type="text" id="description" name="description" value="Có đầy đủ các quyền">
           </div>
           <div class="inner-group"> 
             <label clas="inner-label">Phân quyền</label>
             <div class="inner-checkbox-list"> 
-              <div class="inner-checkbox-item"> 
-                <input type="checkbox">
+              <div class="inner-checkbox-item">
+                <input type="checkbox" name="permissions" value="Xem trang Tổng quan">
                 <label>Xem trang Tổng quan</label>
               </div>
-              <div class="inner-checkbox-item"> 
-                <input type="checkbox">
+              <div class="inner-checkbox-item">
+                <input type="checkbox" name="permissions" value="Xem danh mục">
                 <label>Xem danh mục</label>
               </div>
-              <div class="inner-checkbox-item"> 
-                <input type="checkbox">
+              <div class="inner-checkbox-item">
+                <input type="checkbox" name="permissions" value="Tạo danh mục">
                 <label>Tạo danh mục</label>
               </div>
-              <div class="inner-checkbox-item"> 
-                <input type="checkbox">
+              <div class="inner-checkbox-item">
+                <input type="checkbox" name="permissions" value="Sửa danh mục">
                 <label>Sửa danh mục</label>
               </div>
-              <div class="inner-checkbox-item"> 
-                <input type="checkbox">
+              <div class="inner-checkbox-item">
+                <input type="checkbox" name="permissions" value="Xóa danh mục">
                 <label>Xóa danh mục</label>
               </div>
             </div>

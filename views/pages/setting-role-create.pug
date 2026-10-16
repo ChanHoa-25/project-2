@@ -7,30 +7,30 @@ block main
 
  //Section-8
  .section-8  
-  form.inner-form(action="") 
+  form.inner-form#setting-role-create-form
    .inner-group 
-    label(for="nameRole" clas="inner-label") Tên nhóm quyền
-    input(type="text" id="nameRole" value="Quản trị viên") 
+    label(for="name" clas="inner-label") Tên nhóm quyền
+    input(type="text" id="name" name="name" value="Quản trị viên") 
    .inner-group 
-    label(for="desc" clas="inner-label") Mô tả ngắn
-    input(type="text" id="desc" value="Có đầy đủ các quyền") 
+    label(for="description" clas="inner-label") Mô tả ngắn
+    input(type="text" id="description" name="description" value="Có đầy đủ các quyền") 
    .inner-group 
     label(clas="inner-label") Phân quyền
     .inner-checkbox-list 
-     .inner-checkbox-item  
-      input(type="checkbox")
+     .inner-checkbox-item
+      input(type="checkbox" name="permissions" value="Xem trang Tổng quan")
       label Xem trang Tổng quan
-     .inner-checkbox-item  
-      input(type="checkbox")
+     .inner-checkbox-item
+      input(type="checkbox" name="permissions" value="Xem danh mục")
       label Xem danh mục
-     .inner-checkbox-item  
-      input(type="checkbox")
+     .inner-checkbox-item
+      input(type="checkbox" name="permissions" value="Tạo danh mục")
       label Tạo danh mục
-     .inner-checkbox-item  
-      input(type="checkbox")
+     .inner-checkbox-item
+      input(type="checkbox" name="permissions" value="Sửa danh mục")
       label Sửa danh mục
-     .inner-checkbox-item  
-      input(type="checkbox")
+     .inner-checkbox-item
+      input(type="checkbox" name="permissions" value="Xóa danh mục")
       label Xóa danh mục
    .inner-button.inner-two-col 
      button Tạo mới

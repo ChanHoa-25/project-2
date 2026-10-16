@@ -443,3 +443,34 @@ if (settingAccountAdminCreateForm) {
       console.log(avatar);
     });
 }
+
+/* Form Create Role */
+const settingRoleCreateForm = document.querySelector("#setting-role-create-form");
+
+if (settingRoleCreateForm) {
+  const validator = new JustValidate(settingRoleCreateForm);
+
+  validator
+    .addField("#name", [
+      {
+        rule: "required",
+        errorMessage: "Vui lòng nhập tên nhóm quyền!",
+      },
+    ])
+    .onSuccess((event) => {
+      const name = event.target.name.value;
+      const description = event.target.description.value;
+
+      const permissions = [];
+      //Permissions
+      const listElementPermission = settingRoleCreateForm.querySelectorAll(`input[name="permissions"]:checked`);
+      listElementPermission.forEach((input) => {
+        permissions.push(input.value);
+      });
+
+      console.log(name);
+      console.log(description);
+      console.log(permissions);
+    });
+}
+/* End Form Create Role */
