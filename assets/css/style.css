@@ -17,7 +17,7 @@ a {
 
 /* Page-Account */
 .page-account {
-  background-image: url(images/bg-account.svg);
+  background-image: url(../images/bg-account.svg);
   background-repeat: no-repeat;
   min-height: 100vh;
   background-position: center;
@@ -56,6 +56,13 @@ a {
 }
 .form-account .inner-form .inner-group {
   margin-bottom: 30px;
+  position: relative;
+}
+.form-account .inner-form .inner-group .just-validate-error-label {
+  position: absolute;
+  top: 104%;
+  left: 0;
+  font-size: 12px;
 }
 .form-account .inner-form .inner-group .inner-label {
   display: block;
@@ -79,6 +86,12 @@ a {
 }
 .form-account .inner-form .inner-group .inner-control::placeholder {
   color: #a6a6a6;
+}
+.form-account .inner-form .inner-group .inner-control.just-validate-error-field {
+  border-color: red;
+}
+.form-account .inner-form .inner-group .inner-control.just-validate-success-field {
+  border-color: green;
 }
 .form-account .inner-meta {
   display: flex;

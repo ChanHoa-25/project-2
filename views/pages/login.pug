@@ -2,11 +2,12 @@ extends ../layouts/account.pug
 
 block title 
   title Đăng nhập
-  .page-account
+  
+block main
     .form-account 
       h2.inner-title Đăng nhập 
       p.inner-desc Vui lòng nhập email và mật khẩu để tiếp tục
-      form.inner-form
+      form.inner-form#login-form
         .inner-group 
           label(
             for="email"
@@ -14,7 +15,7 @@ block title
           ) Email 
           input(
             type ="email"
-            name=""
+            name="email"
             id="email"
             placeholder ="Ví dụ: levana@gmail.com"
             class="inner-control"
@@ -26,7 +27,7 @@ block title
           ) Mật khẩu 
           input(
             type ="password"
-            name=""
+            name="password"
             id="password"
             
             class="inner-control"
@@ -35,7 +36,7 @@ block title
           .inner-confirm 
             input(
               type="checkbox", 
-              name=""
+              name="rememberPassword"
               id="remember-password",
               class="inner-check"
             )
