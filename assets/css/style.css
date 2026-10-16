@@ -978,6 +978,18 @@ a {
   margin-bottom: 11px;
   color: #606060;
 }
+.section-8 .inner-form .inner-group {
+  position: relative;
+}
+.section-8 .inner-form .inner-group .just-validate-error-label {
+  position: absolute;
+  top: 104%;
+  left: 0;
+  font-size: 12px;
+}
+.section-8 .inner-form .inner-group .just-validate-error-field {
+  border-color: red;
+}
 .section-8 .inner-form .inner-group select,
 .section-8 .inner-form .inner-group input,
 .section-8 .inner-form .inner-group textarea {

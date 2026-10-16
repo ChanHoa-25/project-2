@@ -8,31 +8,31 @@ block main
 
  //Section-8
  .section-8  
-  form.inner-form(action="") 
+  form.inner-form#category-create-form
    .inner-group 
-    label(for="name" clas="inner-label") Tên danh mục
-    input(type="text" id="name") 
+    label(for="name" class="inner-label") Tên danh mục
+    input(type="text" id="name" name="name") 
    .inner-group 
-    label(for="parent" clas="inner-label") Danh mục cha
-    select(id="parent") 
+    label(for="parent" class="inner-label") Danh mục cha
+    select(id="parent" name="parent") 
      option(value="") -- Chọn danh mục --
      option(value="") Danh mục 1
      option(value="") Danh mục 2
    .inner-group 
-    label(for="postion" clas="inner-label") Vị trí
-    input(type="number" id="position") 
+    label(for="postion" class="inner-label") Vị trí
+    input(type="number" id="position" name="position") 
    .inner-group 
-    label(for="status" clas="inner-label") Trạng thái
-    select(id="status") 
+    label(for="status" class="inner-label") Trạng thái
+    select(id="status" name="status") 
      option(value="") Hoạt động
      option(value="") Dừng hoạt động
    .inner-group.inner-two-col 
-    label(for="avata" clas="inner-label") Ảnh đại diện
+    label(for="avata" class="inner-label") Ảnh đại diện
     .inner-upload-image 
-     input(type="file" id="avata" accept="image/*" filepond-image)
+     input(type="file" id="avatar" name="avatar" filepond-image)
    .inner-group.inner-two-col 
     label(for="description" class="inner-label") Mô tả
-    textarea(id="description" textarea-mce)
+    textarea(id="description" name="description" textarea-mce)
    .inner-button.inner-two-col 
      button Tạo mới
   .inner-back  

@@ -75,11 +75,12 @@ if (scheduleSection8) {
 
 //Filepond Image
 const listFilepondImage = document.querySelectorAll("[filepond-image]");
+let filePond = {};
 if (listFilepondImage.length > 0) {
-  listFilepondImage.forEach((item) => {
+  listFilepondImage.forEach((filepondImage) => {
     FilePond.registerPlugin(FilePondPluginImagePreview);
     FilePond.registerPlugin(FilePondPluginFileValidateType);
-    FilePond.create(item, { labelIdle: "+" });
+    filePond[filepondImage.name] = FilePond.create(filepondImage, { labelIdle: "+" });
   });
 }
 //End Filepond Image
@@ -129,4 +130,34 @@ if (revenueChart) {
       maintainAspectRatio: false,
     },
   });
+}
+//Form Create Category
+const categoryCreateForm = document.querySelector("#category-create-form");
+if (categoryCreateForm) {
+  const validator = new JustValidate(categoryCreateForm);
+  validator
+    .addField("#name", [
+      {
+        rule: "required",
+        errorMessage: "Vui lòng nhập tên danh mục!",
+      },
+    ])
+    .onSuccess((event) => {
+      const name = event.target.name.value;
+      const parent = event.target.parent.value;
+      const position = event.target.position.value;
+      const status = event.target.status.value;
+      const avatars = filePond.avatar.getFiles();
+      const description = tinymce.get("description").getContent();
+      let avatar = null;
+      if (avatars.length > 0) {
+        avatar = avatars[0].file;
+      }
+      console.log(filePond);
+      console.log(parent);
+      console.log(position);
+      console.log(status);
+      console.log(avatar);
+      console.log(description);
+    });
 }
