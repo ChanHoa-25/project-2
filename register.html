@@ -5,26 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link rel="stylesheet" href="assets/css/style.css"/>
     <title>Đăng ký</title>
+  </head>
+  <body> 
     <div class="page-account">
       <div class="form-account"> 
         <h2 class="inner-title">Đăng ký</h2>
         <p class="inner-desc">Tạo một tài khoản để tiếp tục</p>
-        <form class="inner-form">
+        <form class="inner-form" id="register-form">
           <div class="inner-group"> 
             <label class="inner-label" for="fullName">Họ tên </label>
-            <input class="inner-control" type="text" name="" id="fullName" placeholder="Ví dụ: Lê Văn A"/>
+            <input class="inner-control" type="text" name="fullName" id="fullName" placeholder="Ví dụ: Lê Văn A"/>
           </div>
           <div class="inner-group"> 
             <label class="inner-label" for="email">Email</label>
-            <input class="inner-control" type="email" name="" id="fullname" placeholder="Ví dụ: levana@gmail.com"/>
+            <input class="inner-control" type="email" name="email" id="email" placeholder="Ví dụ: levana@gmail.com"/>
           </div>
           <div class="inner-group"> 
-            <label class="inner-label" for="passowrd">Mật khẩu </label>
-            <input class="inner-control" type="password" name="" id="password"/>
+            <label class="inner-label" for="password">Mật khẩu </label>
+            <input class="inner-control" type="password" name="password" id="password"/>
           </div>
           <div class="inner-meta">
             <div class="inner-confirm"> 
-              <input class="inner-check" type="checkbox" name="" id="agree"/>
+              <input class="inner-check" type="checkbox" name="agree" id="agree"/>
               <label class="inner-label" for="agree">Tôi chấp nhận các điều khoản và điều kiện</label>
             </div>
           </div>
@@ -32,10 +34,6 @@
         </form>
         <div class="inner-more"> <span>Bạn đã nhớ mật khẩu</span><a href="#">Đăng nhập</a></div>
       </div>
-    </div>
-  </head>
-  <body> 
-    <div class="page-account">
     </div>
     <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js"></script>
     <script src="assets/js/account.js"> </script>

@@ -108,6 +108,13 @@ a {
   font-weight: 400;
   color: var(--color-text);
   opacity: 0.6;
+  position: relative;
+}
+.form-account .inner-meta .inner-confirm .just-validate-error-label {
+  position: absolute;
+  top: 104%;
+  left: 0;
+  font-size: 12px;
 }
 .form-account .inner-meta .inner-forgot-password:hover {
   color: var(--color-primary);
