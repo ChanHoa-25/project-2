@@ -7,16 +7,16 @@ block main
 
  //Section-8
  .section-8  
-  form.inner-form(action="") 
+  form.inner-form#profile-edit-form
    .inner-group 
     label(for="fullName" class="inner-label") Họ và tên
-    input(type="text" id="name") 
+    input(type="text" id="fullName" name="fullName") 
    .inner-group 
     label(for="email" class="inner-label") Email
-    input(type="email" id="email") 
+    input(type="email" id="email" name="email") 
    .inner-group 
     label(for="phone" class="inner-label") Số điện thoại
-    input(type="number" id="phone") 
+    input(type="number" id="phone" name="phone") 
    .inner-group 
     label(for="role" class="inner-label") Chức vụ
     input(type="text" id="role" readonly) 
@@ -26,7 +26,7 @@ block main
    .inner-group.inner-two-col 
     label(for="avata" class="inner-label") Ảnh đại diện
     .inner-upload-image 
-     input(type="file" id="avata" accept="image/*" filepond-image)
+     input(type="file" id="avatar" accept="image/*" name="avatar" filepond-image)
    .inner-button.inner-two-col 
      button Cập nhật
   .inner-back  
